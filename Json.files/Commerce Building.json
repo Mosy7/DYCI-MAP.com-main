@@ -1,0 +1,69 @@
+{
+  "Buildings": {
+    "Commerce Building": {
+      "rooms": {
+        "Case Room": {
+          "schedule": {
+            "ACT113 BSA & BSAIS 1A, 1B": "Wednesday 1:00 - 4:00",
+            "ARE423 BSA 4A": "Saturday 1:00 - 4:00",
+            "ARM423 BSAIS 4A": "Saturday 1:00 - 4:00",
+            "ART123 BSA & BSAIS 1A, 1B": "Thursday 8:00 - 12:00",
+            "FIN123 BSA & BSAIS 2A, 2B": "Thursday 8:00 - 12:00",
+            "ITB223 BSA & BSAIS 2A, 2B": "Tuesday 1:00 - 5:00",
+            "PE2122 BSA & BSAIS 1A, 1B": "Thursday 1:00 - 5:00",
+            "PE4222 BSA & BSAIS 2A, 2B": "Thursday 1:00 - 5:00",
+            "RPH123 BSA & BSAIS 1A, 1B": "Wednesday 8:00 - 12:00"
+          }
+        },
+        "MCL-1-101": {
+          "schedule": {
+            "AFA423 BSA 4A": "Saturday 1:00 - 4:00",
+            "MAS423 BSA 4A": "Wednesday 9:00 - 12:00"
+          }
+        },
+        "MCL-1-102": {
+          "schedule": {
+            "ABC323 BSA 3A": "Friday 4:00 - 7:00",
+            "ACT423 BSAIS 4A": "Thursday 1:00 - 4:00",
+            "AST323 BSA 3A": "Friday 9:00 - 12:00",
+            "AUD423 BSA 4A": "Saturday 9:00 - 12:00",
+            "IT423 BSA 4A": "Wednesday 4:00 - 7:00",
+            "UFR323 BSA 3A": "Friday 1:00 - 4:00"
+          }
+        },
+        "MCL-1-103": {
+          "schedule": {
+            "ASI323 BSA 3A": "Saturday 4:00 - 7:00",
+            "AUD323 BSA 3A": "Saturday 1:00 - 4:00",
+            "CIS323 BSA 3A": "Saturday 8:00 - 12:00",
+            "FAR423 BSA 4A": "Saturday 4:00 - 7:00",
+            "ISM323 BSAIS 3A": "Saturday 1:00 - 5:00",
+            "OPA323 BSA 3A": "Thursday 1:00 - 5:00",
+            "PTA323 BSA 3A": "Thursday 8:00 - 12:00"
+          }
+        },
+        "Simulation Room": {
+          "schedule": {
+            "BAL323 BSAIS 3A": "Saturday 1:00 - 5:00",
+            "FIM323 BSAIS 3A": "Saturday 1:00 - 5:00",
+            "MIS323 BSAIS 3A": "Saturday 8:00 - 12:00",
+            "SAD323 BSAIS 3A": "Saturday 8:00 - 12:00"
+          }
+        },
+        "The ThinkTank": {
+          "schedule": {
+            "SAS323 BSA & BSAIS 3A": "Wednesday 1:00 - 5:00"
+          }
+        },
+        "War Room": {
+          "schedule": {
+            "COS113 BSA & BSAIS 1A, 1B": "Friday 1:00 - 4:00",
+            "LAW223 BSA & BSAIS 2A, 2B": "Wednesday 1:00 - 4:00",
+            "STB323 BSA & BSAIS 3A": "Saturday 8:00 - 12:00",
+            "TAX223 BSA & BSAIS 2A, 2B": "Wednesday 9:00 - 12:00"
+          }
+        }
+      }
+    }
+  }
+}

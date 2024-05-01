@@ -1,0 +1,15 @@
+{
+    "Computer Lab Building": {
+      "PRIMELAB": {
+        "PRO323 BSIT 3A & BSCS 3A": {
+          "Saturday": "7:30 - 10:30"
+        },
+        "PRO323 BSIT 3B": {
+          "Saturday": "10:30 - 1:30"
+        },
+        "PRO423 BSIT 4A": {
+          "Saturday": "2:00 - 5:00"
+        }
+      }
+    }
+  }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DYCI INTERACTIVE MAP</MAP></title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <script type ="module" src="mapscript.js"></script>
+    </head>
+
+    <body>
+        <div class="containter">
+            <div class="Image">
+                <img src="DYCI LOGO.png" class="center">
+             </div>
+            <div class="text">
+                <div class="myform">
+                    <form >
+                        <h1 style="text-align: center;", 
+                            style="position: absolute;">
+                            DYCI INTERACTIVE MAP
+                        </h1>
+                    </form>
+                </div>
+            </div>
+
+            
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <select id="category">
+                <option value="building">Building</option>
+                <option value="room">Room</option>
+                <option value="schedule">Schedule</option>
+            </select>
+            <button onclick="searchRoom()"><i class="fas fa-search"></i></button>
+        </div>
+    
+        <div class="results">
+            <h2>Search Results</h2>
+            <table class="table" id="searchResults">
+                <thead>
+                <tr>
+                    <th>Schedule</th>
+                </tr>
+                </thead>
+                <tbody id="searchResultsBody">
+                <!-- Placeholder for search results -->
+                </tbody>
+            </table>
+        </div>
+        <div id="buildingAndRoom"></div>
+            <br>
+            <div class="image-container" id="mapContainer">
+                <img src="map.svg" class="map" id="mapImage">
+            </div>
+                 
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const mapContainer = document.getElementById('mapContainer');
+                        const mapImage = document.getElementById('mapImage');
+                        let isDragging = false;
+                        let startOffsetX = 0;
+                        let startOffsetY = 0;
+                        let zoomLevel = 1;
+                
+                        mapContainer.addEventListener('mousedown', handleMouseDown);
+                        document.addEventListener('mousemove', handleMouseMove);
+                        document.addEventListener('mouseup', handleMouseUp);
+                        mapContainer.addEventListener('wheel', handleWheel);
+                
+                        function handleMouseDown(event) {
+                            isDragging = true;
+                            startOffsetX = event.clientX - mapImage.offsetLeft;
+                            startOffsetY = event.clientY - mapImage.offsetTop;
+                        }
+                
+                        function handleMouseMove(event) {
+                            if (isDragging) {
+                                const offsetX = event.clientX - startOffsetX;
+                                const offsetY = event.clientY - startOffsetY;
+                                mapImage.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${zoomLevel})`;
+                            }
+                        }
+                
+                        function handleMouseUp() {
+                            isDragging = false;
+                            mapContainer.removeEventListener('mouseup', handleMouseUp);
+                        }
+                                        
+                        function handleWheel(event) {
+                            event.preventDefault();
+                            const delta = Math.sign(event.deltaY);
+                            const scaleStep = 0.1;
+                            
+                            if (delta === 1) {
+                                // Zoom in
+                                zoomLevel += scaleStep;
+                            } else {
+                                // Zoom out with limit
+                                const minZoomLevel = mapContainer.offsetWidth / mapImage.offsetWidth;
+                                zoomLevel = Math.max(zoomLevel - scaleStep, minZoomLevel);
+                            }
+
+                            mapImage.style.transform = `scale(${zoomLevel})`;
+                        }
+                    });
+                </script>
+                
+              <!--
+              <div class="box">
+                <input type="checkbox" id="check">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search Room">
+                        <label for="check" class="icon">
+                        <i class="fas fa-search"></i>
+                        </label>
+                    </div>
+              </div>
+              -->
+                  
+        
+        </div>
+        
+      <div>
+        <a href="admin.html" class="admin-link">I am an admin</a>
+      </div>
+
+
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+        <script>
+            // Initialize Firebase
+            var firebaseConfig = {
+                // Your Firebase configuration
+            };
+            firebase.initializeApp(firebaseConfig);
+        
+            function searchRoom() {
+                var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                var searchResultsBody = document.getElementById('searchResultsBody');
+                var buildingAndRoom = document.getElementById('buildingAndRoom');
+                searchResultsBody.innerHTML = ''; // Clear previous search results
+                buildingAndRoom.innerHTML = ''; // Clear previous building and room information
+        
+                // Reference to the Firebase database
+                var database = firebase.database();
+        
+                // Query the database for rooms matching the search term
+                database.ref('Buildings').orderByKey().once('value', function (snapshot) {
+                    snapshot.forEach(function (building) {
+                        building.child('rooms').forEach(function (room) {
+                            var roomName = room.key.toLowerCase();
+                            if (roomName.includes(searchTerm)) {
+                                var schedule = '';
+                                room.child('schedule').forEach(function (scheduleEntry) {
+                                    schedule += '<tr><td>' + scheduleEntry.key + '</td><td>' + scheduleEntry.val() + '</td></tr>';
+                                });
+                                searchResultsBody.innerHTML += schedule;
+                                buildingAndRoom.innerHTML = '<p>Building: ' + building.key + '</p><p>Room: ' + room.key + '</p>';
+                            }
+                        });
+                    });
+                });
+            }
+        </script>
+        
+        
+        
+
+</body>
+</html>
