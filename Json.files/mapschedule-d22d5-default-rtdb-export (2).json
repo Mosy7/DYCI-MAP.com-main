@@ -1,0 +1,676 @@
+{
+  "Rooms": [
+    {
+      "Building": "Nursing Building",
+      "Name": "DMDY 101",
+      "Schedule": {
+        "Saturday": [
+          "1:00 - 4:00 LAW113 BSA & BSAIS 1A, 1B",
+          "9:00 - 12:00 ACT223 BSA & BSAIS 2A, 2B"
+        ]
+      }
+    },
+    {
+      "Building": "Nursing Building",
+      "Name": "DMDY 201 ANATOMY ROOM",
+      "Schedule": {
+        "Friday": [
+          "7:00 - 11:00 ANATOMY LAB",
+          "1:00 - 7:00 ANATOMY LAB"
+        ],
+        "Monday": [
+          "12:00 - 7:00 ANATOMY LAB"
+        ],
+        "Saturday": [
+          "7:00 - 9:00 DYNCM 114 D",
+          "9:00 - 11:00 DYNCM 114 C",
+          "11:00 - 1:00 DYNCM 114 B",
+          "1:00 - 3:00 DYNCM 114 E",
+          "3:00 - 5:00 DYNCM 114 A"
+        ],
+        "Thursday": [
+          "7:00 - 7:00 ANATOMY LAB"
+        ],
+        "Tuesday": [
+          "7:00 - 7:00 ANATOMY LAB"
+        ],
+        "Wednesday": [
+          "7:00 - 7:00 ANATOMY LAB"
+        ]
+      }
+    },
+    {
+      "Building": "Nursing Building",
+      "Name": "DMDY 202 AMPHITHEATER",
+      "Schedule": {
+        "Friday": [
+          "7:00 - 11:00 DYNCM104 DYNCM107 SL A",
+          "7:00 - 11:00 DYNCM104 DYNCM107 SL D"
+        ],
+        "Monday": [
+          "8:00 - 12:00 DYNCM 119 A",
+          "1:00 - 5:00 DYNCM 119 B"
+        ],
+        "Saturday": [
+          "8:00 - 12:00 DYNCM118 B",
+          "1:00 - 5:00 DYNCM118 A"
+        ],
+        "Thursday": [
+          "7:00 - 11:00 DYNCM104 DYNCM107 SL A",
+          "7:00 - 11:00 DYNCM104 DYNCM107 SL D"
+        ],
+        "Tuesday": [
+          "8:00 - 9:30 MMW 1B",
+          "10:00 - 11:30 MMW 1E",
+          "1:00 - 3:00 MMW 1C",
+          "4:00 - 5:00 PE 1B"
+        ],
+        "Wednesday": [
+          "10:00 - 12:00 MMW 1D",
+          "1:00 - 2:30 MMW 1K",
+          "2:30 - 4:00 PCO113 1L",
+          "4:00 - 5:00 STS 1K"
+        ]
+      }
+    },
+    {
+      "Building": "Nursing Building",
+      "Name": "DMDY 203 SKILLS LABORATORY",
+      "Schedule": {
+        "Friday": [
+          "7:00 - 5:00 SKILLS DEMONSTRATION"
+        ],
+        "Monday": [
+          "7:00 - 5:00 SKILLS DEMONSTRATION"
+        ],
+        "Saturday": [
+          "7:00 - 5:00 SKILLS DEMONSTRATION"
+        ],
+        "Thursday": [
+          "7:00 - 5:00 SKILLS DEMONSTRATION"
+        ],
+        "Tuesday": [
+          "7:00 - 5:00 SKILLS DEMONSTRATION"
+        ],
+        "Wednesday": [
+          "7:00 - 5:00 SKILLS DEMONSTRATION"
+        ]
+      }
+    },
+    {
+      "Building": "Nursing Building",
+      "Name": "DMDY 204",
+      "Schedule": {
+        "Friday": [
+          "11:00 - 1:00 STS 1D"
+        ],
+        "Thursday": [
+          "8:30 - 9:30 PCO 1N",
+          "10:30 - 12:00 MMW 1M",
+          "12:00 - 2:00 MMW 1I",
+          "2:00 - 3:00 PE 1D",
+          "3:00 - 4:00 PE 1C"
+        ],
+        "Tuesday": [
+          "4:00 - 5:30 MMW 1A"
+        ]
+      }
+    },
+    {
+      "Building": "Nursing Building",
+      "Name": "DMDY 205 CAREGIVER ROOM",
+      "Schedule": {
+        "Monday": [
+          "8:00 - 12:00 DYNCM118 DYNCM121 SL",
+          "1:00 - 5:00 DYNCM118 DYNCM121 SL"
+        ],
+        "Saturday": [
+          "7:00 - 11:00 DYNCM112 SL C, D",
+          "11:00 - 3:00 DYNCM112 SL C, D",
+          "3:00 - 7:00 DYNCM 112 E"
+        ],
+        "Thursday": [
+          "7:00 - 11:00 DYNCM104 DYNCM107 SL",
+          "12:00 - 4:00 DYNCM104 DYNCM107 SL",
+          "7:00 - 11:00 DYNCM104 DYNCM107 SL",
+          "12:00 - 4:00 DYNCM104 DYNCM107 SL"
+        ],
+        "Tuesday": [
+          "7:00 - 10:00 DYNCM112 SL A, B",
+          "11:00 - 2:00 DYNCM112 SL C, D",
+          "7:00 - 11:00 DYNCM112 SL C, D",
+          "11:00 - 3:00 DYNCM112 SL C, D"
+        ]
+      }
+    },
+    {
+      "Building": "Nursing Building",
+      "Name": "DMDY 206",
+      "Schedule": {
+        "Monday": [
+          "8:00 - 12:00 DYNCM118 DYNCM121 SL",
+          "4:00 - 7:00 DYNCM118 DYNCM121 SL",
+          "4:00 - 7:00 NBIO115 1L, 1J"
+        ],
+        "Saturday": [
+          "7:00 - 10:00 NBIO115 1K, 1L",
+          "1:00 - 4:00 NBIO115 1M, 1N",
+          "4:00 - 7:00 NBIO115 1O"
+        ],
+        "Thursday": [
+          "7:00 - 11:00 DYNCM104 DYNCM107 SL B",
+          "12:00 - 4:00 DYNCM104 DYNCM107 SL E",
+          "4:00 - 7:00 NBIO115 1C, 1D"
+        ],
+        "Tuesday": [
+          "8:30 - 10:00 UTS 1K",
+          "10:30 - 12:00 UTS 1L",
+          "1:00 - 2:00 PE 1O",
+          "2:00 - 3:00 PE 1E",
+          "4:00 - 7:00 NBIO115 1G, 1H"
+        ],
+        "Wednesday": [
+          "8:00 - 12:00 MID SL",
+          "1:00 - 4:00 MID SL",
+          "4:00 - 7:00 NBIO115 1A, 1B"
+        ]
+      }
+    },
+    {
+      "Building": "Nursing Building",
+      "Name": "DMDY 207 MICROBIOLOGY",
+      "Schedule": {
+        "Friday": [
+          "7:00 - 11:00 DYNCM104 DYNCM107 SL C",
+          "12:00 - 4:00 DYNCM104 DYNCM107 SL F"
+        ],
+        "Monday": [
+          "1:00 - 5:00 DYNCM118 DYNCM121 SL B"
+        ],
+        "Saturday": [
+          "1:00 - 3:00 STS 1B",
+          "3:00 - 5:00 UTS 1B"
+        ],
+        "Thursday": [
+          "8:00 - 9:30 UTS 1O",
+          "9:30 - 11:00 PCO 1O",
+          "1:00 - 2:30 STS 1N",
+          "2:30 - 4:00 MMW 1H"
+        ],
+        "Tuesday": [
+          "8:30 - 10:00 PCO 1M",
+          "10:30 - 12:00 PCO 1K",
+          "12:00 - 1:00 PE 1A",
+          "1:00 - 2:30 MMW 1N",
+          "4:00 - 5:30 STS 1L"
+        ],
+        "Wednesday": [
+          "12:00 - 2:00 MMW 1J"
+        ]
+      }
+    },
+    {
+      "Building": "The Sofia Building 1",
+      "Name": "AVR ROOM",
+      "Schedule": {
+        "Friday": [
+          "7:30 - 10:30 FIM123 BSIT 1PACED",
+          "10:30 - 1:30 DMS123 BSCS 1A, ACT 1A",
+          "8:00 - 10:00 RPH123 BSCS 1A, ACT 1A",
+          "10:30 - 12:30 RPH123 BSIT 1C",
+          "3:00 - 5:00 RPH123 BSIT 1D",
+          "5:00 - 7:00 CSC323 POLSCI 3A"
+        ],
+        "Monday": [
+          "8:00 - 10:00 PE2122 BSIT 1A, 1B",
+          "2:00 - 5:00 FRE223 BSIT 2C",
+          "5:00 - 7:00 RPH123 BSIT 1B"
+        ],
+        "Saturday": [
+          "8:00 - 10:00 RPH123 BSCS 1A, ACT 1A",
+          "10:30 - 12:30 RPH123 BSIT 1C",
+          "3:00 - 5:00 RPH123 BSIT 1D",
+          "5:00 - 7:00 CSC323 POLSCI 3A"
+        ],
+        "Thursday": [
+          "7:00 - 10:00 ART123 BSN 1N",
+          "12:00 - 2:00 ART123 BSN 1O",
+          "2:00 - 5:00 FRE223 BSIT 2B",
+          "5:00 - 7:00 RPH123 BSIT 1A"
+        ],
+        "Tuesday": [
+          "7:30 - 10:30 SAD223 BSIT 2C",
+          "10:30 - 1:30 SAD223 BSIT 2A",
+          "2:00 - 5:00 FIM123 BSIT 1D",
+          "5:00 - 7:00 RPH123 BSCPE 1B"
+        ],
+        "Wednesday": [
+          "7:30 - 10:30 PPL223 BSIT 2C",
+          "10:30 - 1:30 OSS223 BSCPE 2A",
+          "2:00 - 5:00 PPL223 BSIT 2B",
+          "5:00 - 7:00 PE4222 BSIT 2C"
+        ]
+      }
+    },
+    {
+      "Building": "The Sofia Building 1",
+      "Name": "DISCUSSION ROOM 1 & 2",
+      "Schedule": {
+        "Friday": [
+          "7:30 - 10:30 DIS123 BSCPE 1A, 1B",
+          "10:30 - 1:30 TEC323 BSCPE 3A",
+          "2:00 - 5:00 PHY124 BSCPE 1A, 1B",
+          "5:00 - 7:00 ART123 BSIT 1D"
+        ],
+        "Monday": [
+          "7:30 - 10:30 PPL223 BSCS 2A",
+          "10:30 - 1:30 FRE223 BSCS 2A",
+          "2:00 - 5:00 PHY124 BSIT 1A",
+          "5:00 - 7:00 ART123 BSIT 1A"
+        ],
+        "Saturday": [
+          "7:30 - 10:30 ART123 BSCPE 1A, 1B",
+          "10:30 - 12:30 ART123 BSCS 1A, ACT 1A"
+        ],
+        "Thursday": [
+          "7:30 - 10:30 PPL223 BSIT 1PACED",
+          "10:30 - 1:30 FRE223 BSIT 1PACED, BSIT 2A",
+          "2:00 - 5:00 PHY124 BSIT 1B",
+          "5:00 - 7:00 ART123 BSIT 1B"
+        ],
+        "Tuesday": [
+          "7:30 - 9:30 PE4222 BSIT 2A",
+          "9:30 - 12:30 PHY123 BSIT 1D",
+          "12:30 - 4:00 PHY123 BSIT 1C",
+          "5:00 - 7:00 ART123 BSIT 1C"
+        ],
+        "Wednesday": [
+          "7:30 - 10:30 FEC224 BSCPE 2A",
+          "10:30 - 1:30 PPL223 BSIT 2A",
+          "2:00 - 5:00 PHY124 BSIT 1PACED, BSCS1A, ACT 1A",
+          "5:00 - 7:00 RPH123 BSCPE 1A"
+        ]
+      }
+    },
+    {
+      "Building": "RoboLab Building",
+      "Name": "SPARKLAB",
+      "Schedule": {
+        "Friday": [
+          "2:00 - 5:00 DSA223 ACT 2A"
+        ],
+        "Monday": [
+          "10:30 - 1:30 IPT223 BSIT 2C"
+        ],
+        "Saturday": [
+          "7:30 - 10:30 DES or CPE422 BSCPE 4A",
+          "10:30 - 1:30 EDDA123 BSCPE 1B",
+          "2:00 - 5:00 EDDA123 BSCPE 1A"
+        ],
+        "Thursday": [
+          "10:30 - 1:30 CAD221 BSCPE 2A"
+        ],
+        "Tuesday": [
+          "10:30 - 1:30 IPT223 BSIT 2B"
+        ]
+      }
+    },
+    {
+      "Building": "RoboLab Building",
+      "Name": "INSPIRE or CPE LAB",
+      "Schedule": {
+        "Monday": [
+          "10:30 - 1:30 BOS323 BSCPE 3A",
+          "2:00 - 5:00 MIC324 BSCPE 3A"
+        ],
+        "Saturday": [
+          "7:30 - 10:30 NAC223 BSCS 2A",
+          "10:30 - 1:30 SEC323 BSCPE 3A"
+        ],
+        "Thursday": [
+          "7:30 - 10:30 NUM223 BSCPE 2A",
+          "1:00 - 5:00 PHY124 BSIT 1PACED"
+        ],
+        "Tuesday": [
+          "7:30 - 10:30 FRE223 BSIT 1PACED",
+          "10:30 - 1:30 DAA223 BSCS 2A"
+        ],
+        "Wednesday": [
+          "7:30 - 10:30 NAC 223 BSIT 2A",
+          "10:30 - 1:30 NAC 223 BSIT 2B",
+          "2:00 - 5:00 NAC 223 BSIT 2C"
+        ]
+      }
+    },
+    {
+      "Building": "HRM Building",
+      "Name": "CHMT 301",
+      "Schedule": {
+        "Friday": [
+          "8:00 - 1:00 EPG123 BSTM 1A",
+          "2:00 - 7:00 FFS223 BSHM 2B"
+        ],
+        "Monday": [
+          "8:00 - 1:00 EPG123 BSMT 1D",
+          "4:00 - 6:00 PE2122 BSHM 1C"
+        ],
+        "Thursday": [
+          "8:00 - 10:00 ETH123 BSTM 1D",
+          "2:00 - 7:00 ABT223 BSTM 2A"
+        ],
+        "Tuesday": [
+          "8:00 - 10:00 RPH123 BSTM 1A",
+          "10:00 - 12:00 PE2122 BSTM 1A",
+          "1:00 - 3:00 ETH123 BSTM 1A",
+          "3:00 - 5:00 ART123 BSTM 1A"
+        ],
+        "Wednesday": [
+          "8:00 - 1:00 EBP323 BSHM 3D",
+          "1:00 - 8:00 EAC323 BSHM 3A"
+        ]
+      }
+    },
+    {
+      "Building": "HRM Building",
+      "Name": "CHMT 302",
+      "Schedule": {
+        "Friday": [
+          "9:00 - 12:00 MPT123 BSTM 1B",
+          "4:00 - 7:00 THM323 BSHM 3B"
+        ],
+        "Monday": [
+          "8:00 - 10:00 PE4222 BSTM 2D",
+          "1:00 - 4:00 MPT123 BSTM 1C",
+          "4:00 - 6:00 RPH123 BSTM 1D"
+        ],
+        "Thursday": [
+          "10:00 - 12:00 SOC123 BSME 1C",
+          "1:00 - 4:00 BSM323 BSHM 3A",
+          "4:00 - 7:00 TPP223 BSTM 2D"
+        ],
+        "Tuesday": [
+          "8:00 - 1:00 EPG123 BSTM 1C",
+          "3:00 - 5:00 PE4222 BSHM 2B"
+        ],
+        "Wednesday": [
+          "7:00 - 12:00 ECT323 BSTM 3B",
+          "1:00 - 4:00 SST323 BSTM 3B",
+          "5:00 - 8:00 BSM323 BSHM 3C"
+        ]
+      }
+    },
+    {
+      "Building": "HRM Building",
+      "Name": "CHMT 303",
+      "Schedule": {
+        "Friday": [
+          "9:00 - 12:00 PCT123 BSTM 1D",
+          "1:00 - 4:00 BSM323 BSHM 3C"
+        ],
+        "Monday": [
+          "8:00 - 1:00 ABT223 BSHM 2B",
+          "1:00 - 4:00 FLN223 BSTM 2A",
+          "4:00 - 6:00 SCM223 BSHM 2B"
+        ],
+        "Thursday": [
+          "8:00 - 1:00 EPG123 BSTM 1B",
+          "1:00 - 8:00 EAC323 BSHM 3D"
+        ],
+        "Tuesday": [
+          "9:00 - 12:00 PRH423 BSHM 4A",
+          "11:30 - 1:00 MRM323 BSME 3B",
+          "1:00 - 2:30 MLI321 BSME 3B",
+          "2:30 - 4:00 FMA323 BSME 3B"
+        ],
+        "Wednesday": [
+          "9:00 - 12:00 FLN223 BSTM 2B",
+          "1:00 - 6:00 FLO223 BSHM 2C"
+        ]
+      }
+    },
+    {
+      "Building": "HRM Building",
+      "Name": "CHMT 401",
+      "Schedule": {
+        "Friday": [
+          "8:00 - 9:00 MD2422 BSME 4A",
+          "9:00 - 10:30 MD2421 BSME 4A",
+          "12:00 - 1:30 AMA223 BSME 2C",
+          "3:00 - 4:00 DRB222 BSME SPECIAL CLASS, BSME 2C",
+          "4:00 - 6:00 TH2224 BSME 2C"
+        ],
+        "Monday": [
+          "7:30 - 9:30 ETH123 BSME 1A",
+          "10:00 - 12:00 SOC123 BSME 1B",
+          "12:30 - 2:30 ART123 BSME 1A",
+          "3:00 - 5:00 SOC123 BSME 1A",
+          "5:00 - 7:00 PE2122 BSME 1A"
+        ],
+        "Saturday": [
+          "8:30 - 9:30 BEL222 BSME 2B",
+          "9:30 - 11:00 BEL221 BSME 2B",
+          "11:00 - 12:00 BEL222 BSME 2A",
+          "12:00 - 1:30 BEL221 BSME 2A",
+          "1:30 - 2:30 BEL222 BSME 2C",
+          "2:30 - 4:00 BEL221 BSME 2C"
+        ],
+        "Thursday": [
+          "8:00 - 10:00 ME2422 BSME 4A",
+          "10:00 - 1:00 IPE421 BSME 4A",
+          "1:30 - 3:00 PEN121 BSME 1C",
+          "3:00 - 4:30 PEN121 BSME 1B"
+        ],
+        "Tuesday": [
+          "7:00 - 10:00 IPE423 BSME 4A",
+          "11:00 - 1:00 RPH123 BSME 1A",
+          "1:00 - 3:00 RPH123 BSME 1B",
+          "4:00 - 5:30 RPH123 BSME 2C",
+          "5:30 - 7:30 FL1323 BSME 3A, 3B"
+        ],
+        "Wednesday": [
+          "10:00 - 12:00 PE4222 BSME 2C",
+          "3:00 - 5:00 PE4222 BSME 2A",
+          "5:00 - 7:00 TCW223 BSME 2A"
+        ]
+      }
+    },
+    {
+      "Building": "HRM Building",
+      "Name": "CHMT 402",
+      "Schedule": {
+        "Friday": [
+          "8:00 - 10:00 TCW223 BSME 2C",
+          "11:30 - 12:30 MD2422 BSME 4B",
+          "12:30 - 2:00 MD2421 BSME 4B",
+          "2:00 - 3:30 LEC422 BSME 4B",
+          "4:00 - 5:30 LEC422 BSME 4A"
+        ],
+        "Monday": [
+          "8:00 - 10:00 PE4222 BSTM 2B",
+          "10:00 - 12:00 ART123 BSME 1C",
+          "1:00 - 3:00 ETH123 BSME 1C",
+          "3:00 - 5:00 ART123 BSME 1B",
+          "5:00 - 7:00 PE2122 BSME 1B"
+        ],
+        "Thursday": [
+          "7:00 - 10:00 IPE421 BSME 4B",
+          "10:00 - 12:00 ME2422 BSME 4B",
+          "1:00 - 4:00 SST323 BSTM 3A"
+        ],
+        "Tuesday": [
+          "8:00 - 9:30 PS2421 BSME 4B",
+          "10:00 - 1:00 IPE423 BSME 4B",
+          "1:00 - 2:30 MRM323 BSME 3A",
+          "2:30 - 4:00 ML1321 BSME 3A",
+          "4:00 - 5:30 FMA323 BSME 3A"
+        ],
+        "Wednesday": [
+          "7:00 - 12:00 ECT323 BSTM 3B",
+          "1:30 - 3:00 EDA223 BSME 2C",
+          "3:00 - 4:00 DRB222 BSME 2C",
+          "4:00 - 6:00 TH2224 BSME 2C"
+        ]
+      }
+    },
+    {
+      "Building": "HRM Building",
+      "Name": "CHMT 403",
+      "Schedule": {
+        "Friday": [
+          "8:00 - 9:30 AMA223 BSME 2A",
+          "10:00 - 12:00 RZL223 BSME 2C",
+          "1:00 - 3:00 RZL223 BSME 2A",
+          "4:00 - 6:00 RPH123 BSHM 1B"
+        ],
+        "Monday": [
+          "7:00 - 12:00 ITM223 BSHM 2C",
+          "5:00 - 7:00 PE2122 BSME 1C"
+        ],
+        "Thursday": [
+          "8:00 - 9:30 RSY323 BSME 3A",
+          "9:30 - 10:30 ME2322 BSME 3A",
+          "10:30 - 12:00 ME2321 BSME 3A",
+          "1:00 - 3:00 COE322 BSME 3A",
+          "3:00 - 4:00 MSE322 BSME 3A",
+          "4:00 - 5:30 MSE321 BSME 3A"
+        ],
+        "Tuesday": [
+          "8:00 - 9:30 EC2123 BSME 1A",
+          "9:30 - 11:00 PEN123 BSME 1A",
+          "11:30 - 1:00 MRM323 BSME 3B",
+          "1:00 - 2:30 MLI321 BSME 3B",
+          "2:30 - 4:00 FMA323 BSME 3B"
+        ],
+        "Wednesday": [
+          "8:00 - 10:00 TH2224 BSME 2A",
+          "10:00 - 11:30 EDA223 BSME 2A",
+          "12:00 - 1:00 DRB222 BSME 2A",
+          "1:00 - 4:00 FLN223 BSHM 2B",
+          "5:00 - 8:00 THM323 BSHM 3D"
+        ]
+      }
+    },
+    {
+      "Name": "Case Room",
+      "Schedule": {
+        "Saturday": [
+          "1:00 - 4:00 ARE423 BSA 4A",
+          "1:00 - 4:00 ARM423 BSAIS 4A"
+        ],
+        "Thursday": [
+          "8:00 - 12:00 ART123 BSA & BSAIS 1A, 1B",
+          "8:00 - 12:00 FIN123 BSA & BSAIS 2A, 2B",
+          "1:00 - 5:00 PE2122 BSA & BSAIS 1A, 1B",
+          "1:00 - 5:00 PE4222 BSA & BSAIS 2A, 2B"
+        ],
+        "Tuesday": [
+          "1:00 - 5:00 ITB223 BSA & BSAIS 2A, 2B"
+        ],
+        "Wednesday": [
+          "8:00 - 12:00 RPH123 BSA & BSAIS 1A, 1B",
+          "1:00 - 4:00 ACT113 BSA & BSAIS 1A, 1B"
+        ]
+      }
+    },
+    {
+      "Name": "War Room",
+      "Schedule": {
+        "Friday": [
+          "1:00 - 4:00 COS113 BSA & BSAIS 1A, 1B"
+        ],
+        "Saturday": [
+          "8:00 - 12:00 STB323 BSA & BSAIS 3A"
+        ],
+        "Wednesday": [
+          "9:00 - 12:00 TAX223 BSA & BSAIS 2A, 2B",
+          "1:00 - 4:00 LAW223 BSA & BSAIS 2A, 2B"
+        ]
+      }
+    },
+    {
+      "Name": "The ThinkTank",
+      "Schedule": {
+        "Wednesday": [
+          "1:00 - 5:00 SAS323 BSA & BSAIS 3A"
+        ]
+      }
+    },
+    {
+      "Name": "Simulation Room",
+      "Schedule": {
+        "Saturday": [
+          "8:00 - 12:00 SAD323 BSAIS 3A",
+          "8:00 - 12:00 MIS323 BSAIS 3A",
+          "1:00 - 5:00 BAL323 BSAIS 3A",
+          "1:00 - 5:00 FIM323 BSAIS 3A"
+        ]
+      }
+    },
+    {
+      "Name": "MCL-1-101",
+      "Schedule": {
+        "Saturday": [
+          "1:00 - 4:00 AFA423 BSA 4A"
+        ],
+        "Wednesday": [
+          "9:00 - 12:00 MAS423 BSA 4A"
+        ]
+      }
+    },
+    {
+      "Name": "MCL-1-102",
+      "Schedule": {
+        "Friday": [
+          "9:00 - 12:00 AST323 BSA 3A",
+          "1:00 - 4:00 UFR323 BSA 3A",
+          "4:00 - 7:00 ABC323 BSA 3A"
+        ],
+        "Saturday": [
+          "9:00 - 12:00 AUD423 BSA 4A"
+        ],
+        "Thursday": [
+          "1:00 - 4:00 ACT423 BSAIS 4A"
+        ],
+        "Wednesday": [
+          "4:00 - 7:00 IT423 BSA 4A"
+        ]
+      }
+    },
+    {
+      "Name": "MCL-1-103",
+      "Schedule": {
+        "Saturday": [
+          "8:00 - 12:00 CIS323 BSA 3A",
+          "1:00 - 4:00 AUD323 BSA 3A",
+          "1:00 - 5:00 ISM323 BSAIS 3A",
+          "4:00 - 7:00 ASI323 BSA 3A",
+          "4:00 - 7:00 FAR423 BSA 4A"
+        ],
+        "Thursday": [
+          "8:00 - 12:00 PTA323 BSA 3A",
+          "1:00 - 5:00 OPA323 BSA 3A"
+        ]
+      }
+    },
+    {
+      "Building": "Computer Lab Building",
+      "Name": "PRIMELAB",
+      "Schedule": {
+        "Saturday": [
+          "7:30 - 10:30 PRO323 BSIT 3A & BSCS 3A",
+          "10:30 - 1:30 PRO323 BSIT 3B",
+          "2:00 - 5:00 PRO423 BSIT 4A"
+        ]
+      }
+    },
+    {
+      "Building": "Sapientia Building",
+      "Name": "Sapientia Ideation Center",
+      "Schedule": {
+        "Thursday": [
+          "8:00 - 12:00 ETH113 BSA & BSAIS 1A, 1B"
+        ]
+      }
+    }
+  ]
+}

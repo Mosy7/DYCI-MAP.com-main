@@ -1,3 +1,13 @@
+// Import the functions you need from the SDKs you need
+"https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js";
+"https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js";
+"https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js";
+"https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCElh2CsFhEOJzWikw3hbHrh-08EXN1Jes",
   authDomain: "mapschedule-d22d5.firebaseapp.com",
@@ -8,7 +18,8 @@ const firebaseConfig = {
   appId: "1:271657628743:web:55ecd19dae3ee3f787ed62",
   measurementId: "G-Y5NXRCRDDF"
 };
-const app=initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 const auth = firebase.auth();
-const database  = firebase.database();
+
+
