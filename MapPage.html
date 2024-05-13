@@ -3,11 +3,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DYCI INTERACTIVE MAP</MAP></title>
+        <title>DYCI INTERACTIVE MAP</title>
         <link rel="stylesheet" href="Style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <!-- Firebase SDK imports -->
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+        <!-- Firebase configuration -->
         <script src="firebase-config.js" type="module"></script>
     </head>
 
@@ -40,6 +46,9 @@
             <table class="table" id="searchResults">
                 <thead>
                 <tr>
+                    
+                    <th>Building</th>
+                    <th>Room</th>
                     <th>Schedule</th>
                 </tr>
                 </thead>
@@ -48,7 +57,7 @@
                 </tbody>
             </table>
         </div>
-        <div id="buildingAndRoom"></div>
+        
             <br>
             <div class="image-container" id="mapContainer">
                 <img src="map.svg" class="map" id="mapImage">
@@ -56,55 +65,121 @@
                  
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
-                        const mapContainer = document.getElementById('mapContainer');
-                        const mapImage = document.getElementById('mapImage');
-                        let isDragging = false;
-                        let startOffsetX = 0;
-                        let startOffsetY = 0;
-                        let zoomLevel = 1;
-                
-                        mapContainer.addEventListener('mousedown', handleMouseDown);
-                        document.addEventListener('mousemove', handleMouseMove);
-                        document.addEventListener('mouseup', handleMouseUp);
-                        mapContainer.addEventListener('wheel', handleWheel);
-                
-                        function handleMouseDown(event) {
+                    const mapContainer = document.getElementById('mapContainer');
+                    const mapImage = document.getElementById('mapImage');
+                    let isDragging = false;
+                    let startOffsetX = 0;
+                    let startOffsetY = 0;
+                    let zoomLevel = 1;
+
+                    mapContainer.addEventListener('mousedown', handleMouseDown);
+                    document.addEventListener('mousemove', handleMouseMove);
+                    document.addEventListener('mouseup', handleMouseUp);
+                    mapContainer.addEventListener('wheel', handleWheel);
+
+                    function handleMouseDown(event) {
+                        if (event.button === 0) { // Check if left mouse button is clicked
                             isDragging = true;
                             startOffsetX = event.clientX - mapImage.offsetLeft;
                             startOffsetY = event.clientY - mapImage.offsetTop;
+                            mapImage.style.cursor = 'grabbing'; // Change cursor to grabbing
                         }
-                
-                        function handleMouseMove(event) {
-                            if (isDragging) {
-                                const offsetX = event.clientX - startOffsetX;
-                                const offsetY = event.clientY - startOffsetY;
-                                mapImage.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${zoomLevel})`;
-                            }
-                        }
-                
-                        function handleMouseUp() {
-                            isDragging = false;
-                            mapContainer.removeEventListener('mouseup', handleMouseUp);
-                        }
-                                        
-                        function handleWheel(event) {
-                            event.preventDefault();
-                            const delta = Math.sign(event.deltaY);
-                            const scaleStep = 0.1;
-                            
-                            if (delta === 1) {
-                                // Zoom in
-                                zoomLevel += scaleStep;
-                            } else {
-                                // Zoom out with limit
-                                const minZoomLevel = mapContainer.offsetWidth / mapImage.offsetWidth;
-                                zoomLevel = Math.max(zoomLevel - scaleStep, minZoomLevel);
-                            }
+                    }
 
-                            mapImage.style.transform = `scale(${zoomLevel})`;
+                    function handleMouseMove(event) {
+                        if (isDragging && event.buttons === 1) { // Check if left mouse button is held down
+                            const offsetX = event.clientX - startOffsetX;
+                            const offsetY = event.clientY - startOffsetY;
+                            mapImage.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${zoomLevel})`;
                         }
-                    });
-                </script>
+                    }
+
+                    function handleMouseUp() {
+                        isDragging = false;
+                        mapImage.style.cursor = 'grab'; // Reset cursor to default
+                    }
+
+                    function handleWheel(event) {
+                        event.preventDefault();
+                        const delta = Math.sign(event.deltaY);
+                        const scaleStep = 0.2;
+
+                        if (delta === 1) {
+                            // Zoom in
+                            zoomLevel += scaleStep;
+                        } else {
+                            // Zoom out with limit
+                            const minZoomLevel = mapContainer.offsetWidth / mapImage.offsetWidth;
+                            zoomLevel = Math.max(zoomLevel - scaleStep, minZoomLevel);
+                        }
+
+                        mapImage.style.transform = `scale(${zoomLevel})`;
+                    }
+                });
+
+
+                    //function for searching
+
+                    function searchRoom() {
+                    const searchTerm = document.getElementById('searchInput').value.trim(); 
+                    console.log('Search term:', searchTerm); // Log the search term
+
+                    const searchResultsBody = document.getElementById('searchResultsBody');
+                    
+                    const mapImage = document.getElementById('mapImage'); // Add this line
+
+                    searchResultsBody.innerHTML = '';
+                    
+
+                    firebase.database().ref('Rooms')
+                        .orderByChild('Name')
+                        .startAt(searchTerm) // Use startAt and endAt to perform case-insensitive search
+                        .endAt(searchTerm + '\uf8ff')
+                        .once('value')
+                        .then(snapshot => {
+                            if (snapshot.exists()) {
+                                snapshot.forEach(roomSnapshot => {
+                                    const room = roomSnapshot.val();
+                                    console.log('Room:', room);
+                                    const building = room.Building;
+                                    const name = room.Name;
+                                    const schedule = room.Schedule ? room.Schedule : {};
+
+                                    // Check if the room name matches the search term
+                                    if (name.toLowerCase() === searchTerm.toLowerCase()) {
+                                        // Change the image source based on the building
+                                        if (building === 'Nursing Building') {
+                                            mapImage.src = 'nursing.png';
+                                        } else if (building === 'The Sofia Building 1') {
+                                            mapImage.src = 'sofia.png';
+                                        } else if (building === 'RoboLab Building') {
+                                            mapImage.src = 'robolab.png';
+                                        } else if (building === 'HRM Building') {
+                                            mapImage.src = 'hrm.png';
+                                        } else if (building === 'Computer Lab Building') {
+                                            mapImage.src = 'comlab.png';
+                                        } else if (building === 'Commerce Building') {
+                                            mapImage.src = 'commerce.png';
+                                        }
+                                        
+                                        // Update the UI with search results
+                                        const scheduleHTML = Object.entries(schedule).map(([key, value]) => `<tr><td>${building}</td><td>${name}</td><td>${key}: ${value}</td></tr>`).join('');
+                                        searchResultsBody.innerHTML = scheduleHTML;
+                                        
+                                    }
+                                });
+                            } else {
+                                // Handle case where no rooms match the search term
+                                console.log('No rooms found matching the search term');
+                                // Use default map image if no rooms are found
+                                mapImage.src = 'map.svg';
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error retrieving data:', error);
+                        });
+                }
+                        </script>
                 
               
                   
@@ -117,6 +192,6 @@
 
 
       
-      <script type ="module" src="mapscript.js"></script>
+      
 </body>
 </html>

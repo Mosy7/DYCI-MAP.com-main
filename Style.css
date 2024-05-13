@@ -54,6 +54,8 @@ div.container {
   position: absolute;
   top: 55%;
   left: 10%;
+  max-height: 400px;
+  overflow-y: auto;
   transform: translateY(-50%);
   width: 40%;
   height: 55%;
@@ -185,14 +187,17 @@ position: block ;
 top: 100%;
 left: 0px;
 }
-
+.table-container{
+  max-height: 250px;
+  overflow-y: auto;
+}
 
 table {
   border-collapse: collapse;
   width: 100%;
   font-family: poppins, sans-serif;
   border-radius: 10px; 
-  overflow: hidden; 
+  height: 200px;
 }
 
 thead {
@@ -214,11 +219,3 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #ddd;
 }
-
-
-
-
-  
-  
-  
-  
