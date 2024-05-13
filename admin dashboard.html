@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="admindash.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>Admin Dashboard Panel</title>
+    <!-- Firebase SDK imports -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <!-- Firebase configuration -->
+    <script src="firebase-config.js" type="module"></script>
 </head>
 <body>
     <nav id="sidebar">
         <div class="logo-name">
-            <div class="logo-image">
-               <img src="images/logo.png" alt="">
-            </div>
-            <span class="logo_name">Admin D</span>
+            <span class="logo_name">Admin Dashboard</span>
         </div>
         <div class="menu-items">
             <ul class="nav-links">
@@ -42,30 +47,74 @@
         </div>
     </nav>
     <section class="dashboard">
-        <div class="dash-content">
-            <div class="background-panel"> <!-- Add a container with sky blue background -->
-                <!-- Input fields or dropdowns for schedule, room, and building -->
-                <div class="input-container">
-                    <label for="schedule">Schedule:</label>
-                    <input type="datetime-local" id="schedule" name="schedule">
-                </div>
-                <div class="input-container">
-                    <label for="room">Room:</label>
-                    <input type="text" id="room" name="room">
-                </div>
-                <div class="input-container">
-                    <label for="building">Building:</label>
-                    <input type="text" id="building" name="building">
-                </div>
-                <div class="input-container">
-                    <label for="professor">Professor:</label>
-                    <input type="text" id="professor" name="professor">
-                </div>
-                <button onclick="updateInfo()">Update Info</button> <!-- Keep the button outside the container -->
-            </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            
+            <button onclick="searchRoom()"><i class="fas fa-search"></i></button>
+        </div>
+        
+    
+        <div class="results">
+            <h2>Search Results</h2>
+            <table class="table" id="searchResults">
+                <thead>
+                <tr>
+                    
+                    <th>Building</th>
+                    <th>Room</th>
+                    <th>Schedule</th>
+                </tr>
+                </thead>
+                <tbody id="searchResultsBody">
+                <!-- Placeholder for search results -->
+                </tbody>
+            </table>
         </div>
     </section>
+    <script>
+        function adminSearchRoom() {
+    const searchTerm = document.getElementById('adminSearchInput').value.trim(); 
+    console.log('Admin Search term:', searchTerm); // Log the search term
+
+    const adminSearchResultsBody = document.getElementById('adminSearchResultsBody');
     
+    adminSearchResultsBody.innerHTML = '';
+
+    firebase.database().ref('Rooms')
+        .orderByChild('Name')
+        .startAt(searchTerm) // Use startAt and endAt to perform case-insensitive search
+        .endAt(searchTerm + '\uf8ff')
+        .once('value')
+        .then(snapshot => {
+            if (snapshot.exists()) {
+                snapshot.forEach(roomSnapshot => {
+                    const room = roomSnapshot.val();
+                    console.log('Admin Room:', room);
+                    const building = room.Building;
+                    const name = room.Name;
+                    const schedule = room.Schedule ? room.Schedule : {};
+                    const professor = room.Professor ? room.Professor : ''; // Retrieve Professor from the room data
+
+                    // Check if the room name matches the search term
+                    if (name.toLowerCase() === searchTerm.toLowerCase()) {
+                        // Update the UI with search results
+                        const scheduleHTML = Object.entries(schedule).map(([key, value]) => `<tr><td>${building}</td><td>${name}</td><td>${key}: ${value}</td><td>${professor}</td></tr>`).join('');
+                        adminSearchResultsBody.innerHTML = scheduleHTML;
+                    }
+                });
+            } else {
+                // Handle case where no rooms match the search term
+                console.log('No rooms found matching the search term');
+                // Clear search results if no rooms are found
+                adminSearchResultsBody.innerHTML = '';
+            }
+        })
+        .catch(error => {
+            console.error('Error retrieving data:', error);
+        });
+}
+
+    </script>
     
     
     <script src="script.js"></script>
